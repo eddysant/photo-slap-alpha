@@ -1,0 +1,59 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "photo-slap",
+    "version": "0.0.1"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "dialog": {
+        "all": true,
+        "ask": true,
+        "confirm": true,
+        "message": true, 
+        "open": true,
+        "save": true 
+      },
+      "fs": {
+        "all": false,
+        "readFile": true,
+        "writeFile": false,
+        "readDir": true,
+        "copyFile": false,
+        "createDir": false,
+        "removeDir": false,
+        "removeFile": true,
+        "renameFile": false,
+        "exists": true
+      },
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "windows": [
+      {
+        "title": "photo-slap",
+        "width": 1000,
+        "height": 700
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.photoslap.alpha",
+      "icon": [
+        "icons/icon.ico"
+      ]
+    }
+  }
+}
